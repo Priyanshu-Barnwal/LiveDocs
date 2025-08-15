@@ -7,6 +7,7 @@ export function Editor() {
   const editor = useEditor({
     extensions: [StarterKit],
     content: "<p>Hello World! Start editing…</p>",
+    immediatelyRender: false,
   });
 
   return <EditorContent editor={editor} />;
