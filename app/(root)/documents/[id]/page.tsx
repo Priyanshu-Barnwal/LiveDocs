@@ -1,12 +1,12 @@
 import React from 'react';
-import { Editor } from '@/components/Editor';
+import { TiptapEditor } from '@/components/TiptapEditor';
 
 const Document
  = () => {
   return (
-    <div>
-        <Editor/>
-    </div>
+    <>
+        <TiptapEditor/>
+    </>
   )
 }
 
