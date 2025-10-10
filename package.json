@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.33.1",
     "@liveblocks/client": "^3.3.1",
     "@liveblocks/react": "^3.3.1",
     "@liveblocks/react-tiptap": "^3.3.0",
