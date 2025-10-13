@@ -1,8 +1,7 @@
 import React from 'react';
 import { TiptapEditor } from '@/components/TiptapEditor';
 
-const Document
- = () => {
+const Document = () => {
   return (
     <>
         <TiptapEditor/>
