@@ -72,6 +72,7 @@ export const TiptapEditor = () => {
         class: 'prose-mirror-editor',
       },
     },
+    immediatelyRender: false
   });
 
   return (
