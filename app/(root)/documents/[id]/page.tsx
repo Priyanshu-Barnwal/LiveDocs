@@ -1,12 +1,13 @@
 'use client'
 
-import React from 'react';
 import { TiptapEditor } from '@/components/TiptapEditor';
+import { Navbar } from '@/components/Navbar';
 
 const Document = () => {
   return (
     <>
-        <TiptapEditor/>
+      <Navbar />
+      <TiptapEditor />
     </>
   )
 }
