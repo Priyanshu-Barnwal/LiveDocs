@@ -78,7 +78,7 @@ export const TiptapEditor = () => {
   return (
     <div className="editor-container">
       <MenuBar editor={editor} />
-      <EditorContent editor={editor} />
+      <EditorContent editor={editor} className="editor-content-wrapper" />
     </div>
   );
 };

@@ -33,7 +33,7 @@ export default function RootLayout({
           fontSize: "14px" 
         },
       }}>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased vsc-initialized`}>
           {children}
         </body>

@@ -1,10 +1,11 @@
-import { SignIn } from "@clerk/nextjs";
+import { SignIn } from '@clerk/nextjs'
 
-export default function SignInPage() {
+const SignInPage = () => {
   return (
-    <main className="flex h-screen w-full flex-col items-center justify-center gap-10">
+    <main className="auth-page">
       <SignIn />
     </main>
-    
-)
+  )
 }
+
+export default SignInPage
