@@ -1,44 +1,45 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { ClerkProvider } from '@clerk/nextjs';
-import { dark } from '@clerk/themes';
+import { Inter as FontSans } from "next/font/google"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { cn } from "@/lib/utils"
+import './globals.css'
+import { Metadata } from "next"
+import { ClerkProvider } from "@clerk/nextjs"
+import { dark } from "@clerk/themes"
+import Provider from "./Provider"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontSans = FontSans({
   subsets: ["latin"],
-});
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
-  title: "LiveDocs",
-  description: "Real-time Collaborative Document Editor",
-};
+  title: 'LiveDocs',
+  description: 'Your go-to collaborative editor',
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider
       appearance={{
         baseTheme: dark,
         variables: { 
-          colorPrimary: "#3371FF",
-          fontSize: "14px" 
+          colorPrimary: "#3371FF" ,
+          fontSize: '16px'
         },
-      }}>
+      }}
+    >
       <html lang="en" suppressHydrationWarning>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased vsc-initialized`}>
-          {children}
+        <body
+          className={cn(
+            "min-h-screen font-sans antialiased",
+            fontSans.variable
+          )}
+        >
+          <Provider>
+            {children}
+          </Provider>
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }
-
